@@ -222,8 +222,17 @@ namespace UnityStandardAssets.Vehicles.Car
 
             else if (other.gameObject.CompareTag("Chocolate"))
             {
-                other.gameObject.SetActive(false);
-                firetext.text = ("You Win!");
+                if (quest1 && quest2 && quest3)
+                {
+                    other.gameObject.SetActive(false);
+                    firetext.text = ("You Win!");
+                }
+            }
+            else if (other.gameObject.CompareTag("Lose"))
+            {
+                {
+                    firetext.text = ("You Lose!");
+                }
             }
         }
 
